@@ -1,11 +1,14 @@
-[gd_scene load_steps=15 format=4 uid="uid://dipi8cmdfu2hr"]
+[gd_scene load_steps=19 format=4 uid="uid://dipi8cmdfu2hr"]
 
 [ext_resource type="PackedScene" uid="uid://bsqs8nlgftu0b" path="res://Scenes/player.tscn" id="1_go701"]
+[ext_resource type="Script" uid="uid://ct13rcgb50ay7" path="res://Scripts/game_manager.gd" id="1_o06y3"]
 [ext_resource type="Texture2D" uid="uid://cogjw5pu4wowu" path="res://Assets/brackeys_platformer_assets/sprites/world_tileset.png" id="2_5a7ea"]
+[ext_resource type="FontFile" uid="uid://dd8wa3ypqhq6x" path="res://Assets/brackeys_platformer_assets/fonts/PixelOperator8-Bold.ttf" id="2_k7acu"]
 [ext_resource type="PackedScene" uid="uid://bxfsvawhabh2d" path="res://Scenes/platform(grass).tscn" id="3_5a7ea"]
 [ext_resource type="PackedScene" uid="uid://cdh3qlxh0q8pg" path="res://Scenes/coin.tscn" id="4_8j60k"]
 [ext_resource type="PackedScene" uid="uid://bkigddldcjl78" path="res://Scenes/killzone.tscn" id="5_fo5ed"]
 [ext_resource type="PackedScene" uid="uid://cfihryck5rjph" path="res://Scenes/slime.tscn" id="6_5ukr8"]
+[ext_resource type="AudioStream" uid="uid://6fsjmkrd6eqb" path="res://Assets/brackeys_platformer_assets/music/time_for_adventure.mp3" id="9_5v1tr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fo5ed"]
 texture = ExtResource("2_5a7ea")
@@ -347,7 +350,104 @@ _data = {
 &"move": SubResource("Animation_5a7ea")
 }
 
+[sub_resource type="FontFile" id="FontFile_5ukr8"]
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/8/0/ascent = 0.0
+cache/0/8/0/descent = 0.0
+cache/0/8/0/underline_position = 0.0
+cache/0/8/0/underline_thickness = 0.0
+cache/0/8/0/scale = 1.0
+cache/0/9/0/ascent = 0.0
+cache/0/9/0/descent = 0.0
+cache/0/9/0/underline_position = 0.0
+cache/0/9/0/underline_thickness = 0.0
+cache/0/9/0/scale = 1.0
+cache/0/10/0/ascent = 0.0
+cache/0/10/0/descent = 0.0
+cache/0/10/0/underline_position = 0.0
+cache/0/10/0/underline_thickness = 0.0
+cache/0/10/0/scale = 1.0
+cache/0/11/0/ascent = 0.0
+cache/0/11/0/descent = 0.0
+cache/0/11/0/underline_position = 0.0
+cache/0/11/0/underline_thickness = 0.0
+cache/0/11/0/scale = 1.0
+cache/0/12/0/ascent = 0.0
+cache/0/12/0/descent = 0.0
+cache/0/12/0/underline_position = 0.0
+cache/0/12/0/underline_thickness = 0.0
+cache/0/12/0/scale = 1.0
+cache/0/13/0/ascent = 0.0
+cache/0/13/0/descent = 0.0
+cache/0/13/0/underline_position = 0.0
+cache/0/13/0/underline_thickness = 0.0
+cache/0/13/0/scale = 1.0
+cache/0/14/0/ascent = 0.0
+cache/0/14/0/descent = 0.0
+cache/0/14/0/underline_position = 0.0
+cache/0/14/0/underline_thickness = 0.0
+cache/0/14/0/scale = 1.0
+cache/0/15/0/ascent = 0.0
+cache/0/15/0/descent = 0.0
+cache/0/15/0/underline_position = 0.0
+cache/0/15/0/underline_thickness = 0.0
+cache/0/15/0/scale = 1.0
+cache/0/17/0/ascent = 0.0
+cache/0/17/0/descent = 0.0
+cache/0/17/0/underline_position = 0.0
+cache/0/17/0/underline_thickness = 0.0
+cache/0/17/0/scale = 1.0
+cache/0/18/0/ascent = 0.0
+cache/0/18/0/descent = 0.0
+cache/0/18/0/underline_position = 0.0
+cache/0/18/0/underline_thickness = 0.0
+cache/0/18/0/scale = 1.0
+cache/0/19/0/ascent = 0.0
+cache/0/19/0/descent = 0.0
+cache/0/19/0/underline_position = 0.0
+cache/0/19/0/underline_thickness = 0.0
+cache/0/19/0/scale = 1.0
+cache/0/20/0/ascent = 0.0
+cache/0/20/0/descent = 0.0
+cache/0/20/0/underline_position = 0.0
+cache/0/20/0/underline_thickness = 0.0
+cache/0/20/0/scale = 1.0
+cache/0/21/0/ascent = 0.0
+cache/0/21/0/descent = 0.0
+cache/0/21/0/underline_position = 0.0
+cache/0/21/0/underline_thickness = 0.0
+cache/0/21/0/scale = 1.0
+cache/0/22/0/ascent = 0.0
+cache/0/22/0/descent = 0.0
+cache/0/22/0/underline_position = 0.0
+cache/0/22/0/underline_thickness = 0.0
+cache/0/22/0/scale = 1.0
+cache/0/23/0/ascent = 0.0
+cache/0/23/0/descent = 0.0
+cache/0/23/0/underline_position = 0.0
+cache/0/23/0/underline_thickness = 0.0
+cache/0/23/0/scale = 1.0
+
 [node name="world" type="Node2D"]
+
+[node name="GameManager" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("1_o06y3")
+
+[node name="ScoreLabel" type="Label" parent="GameManager"]
+offset_left = 183.0
+offset_top = 70.0
+offset_right = 349.0
+offset_bottom = 124.0
+theme_override_fonts/font = ExtResource("2_k7acu")
+theme_override_font_sizes/font_size = 8
+text = "You collected 0 coins."
+horizontal_alignment = 1
+autowrap_mode = 2
 
 [node name="Background" type="TileMapLayer" parent="."]
 z_index = -2
@@ -364,7 +464,7 @@ position = Vector2(282, 120)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 zoom = Vector2(4, 4)
-limit_bottom = 280
+limit_bottom = 325
 position_smoothing_enabled = true
 
 [node name="Killzone" parent="." instance=ExtResource("5_fo5ed")]
@@ -401,3 +501,36 @@ position = Vector2(311, 135)
 
 [node name="slime" parent="." instance=ExtResource("6_5ukr8")]
 position = Vector2(551, 207)
+
+[node name="Labels" type="Node" parent="."]
+
+[node name="Label" type="Label" parent="Labels"]
+offset_left = 189.0
+offset_top = 77.0
+offset_right = 375.0
+offset_bottom = 100.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontFile_5ukr8")
+theme_override_font_sizes/font_size = 16
+text = "Welcome, play around!!!"
+
+[node name="Label2" type="Label" parent="Labels"]
+anchors_preset = -1
+anchor_left = -0.622
+anchor_top = 7.513
+anchor_right = -0.622
+anchor_bottom = 7.513
+offset_left = 771.544
+offset_top = -4574.42
+offset_right = 868.544
+offset_bottom = -4551.42
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontFile_5ukr8")
+theme_override_font_sizes/font_size = 16
+text = "Falling hurts..."
+
+[node name="backgroundmusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_5v1tr")
+autoplay = true
+bus = &"Background Music"
+parameters/looping = true
